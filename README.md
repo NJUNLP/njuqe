@@ -53,6 +53,16 @@ Please cite as:
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2023}
 }
+
+@inproceedings{cui2021directqe,
+  title={Directqe: Direct pretraining for machine translation quality estimation},
+  author={Cui, Qu and Huang, Shujian and Li, Jiahuan and Geng, Xiang and Zheng, Zaixiang and Huang, Guoping and Chen, Jiajun},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={14},
+  pages={12719--12727},
+  year={2021}
+}
 ```
 
 ## Contributor
