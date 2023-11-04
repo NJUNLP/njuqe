@@ -88,4 +88,4 @@ Please cite as:
 ```
 
 ## Contributor
-Xiang Geng (gx@smail.nju.edu.cn), Yu Zhang, Wohao Zhang, Yiming Yan, Qu Cui
+Xiang Geng (gx@smail.nju.edu.cn), Yu Zhang, Zhejian Lai, Wohao Zhang, Yiming Yan, Qu Cui
