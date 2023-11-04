@@ -44,9 +44,31 @@ python $FAIRSEQ_PATH/fairseq_cli/train.py \
     --restore-file $XLMR_PATH/xlmr-large-model.pt
 ```
 
+Example of generating pseudo translations with constrained beam search.
+```
+python $FAIRSEQ_PATH/fairseq_cli/generate.py \
+    $PARALLEL_BPE_DATA_PATH \
+    --path $TRANSLATION_MODEL_PATH \
+    --dataset-impl raw --gen-subset $SUBSETNAME --skip-invalid-size-inputs-valid-test --remove-bpe \
+    --task cbs_translation --beam 5 --batch-size 512 \
+    --threshold-prob 0.1 --lamda-ratio 0.55 --softmax-temperature 0.20 \
+    --user-dir $NJUQE_PATH/njuqe
+```
+
+Download tercom from https://www.cs.umd.edu/~snover/tercom/, then use $NJUQE_PATH/scripts/ter/generate_ter_label.sh 
+generate pseudo labels. Design other labeling rules for specific annotations.
+
+
 ## Citation
 Please cite as:
 ``` bibtex
+@inproceedings{geng2023cbsqe,
+  title={Improved Pseudo Data for Machine Translation Quality Estimation with Constrained Beam Search},
+  author={Geng, Xiang and Zhang, Yu and Lai, Zhejian and She, Shuaijie and Zou, Wei and Tao, Shimin and Yang, Hao and Chen, Jiajun and Huang, Shujian},
+  booktitle={Conference on Empirical Methods in Natural Language Processing},
+  year={2023}
+}
+
 @inproceedings{geng2023clqe,
   title={Denoising Pre-Training for Machine Translation Quality Estimation with Curriculum Learning},
   author={Geng, Xiang and Zhang, Yu and Li, Jiahuan and Huang, Shujian and Yang, Hao and Tao, Shimin and Chen, Yimeng and Xie, Ning and Chen, Jiajun},
