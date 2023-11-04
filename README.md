@@ -56,7 +56,7 @@ python $FAIRSEQ_PATH/fairseq_cli/generate.py \
 ```
 
 Download tercom from https://www.cs.umd.edu/~snover/tercom/, then use $NJUQE_PATH/scripts/ter/generate_ter_label.sh 
-generate pseudo labels. Design other labeling rules for specific annotations.
+generate pseudo labels. Or design other labeling rules for specific annotations.
 
 
 ## Citation
