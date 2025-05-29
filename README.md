@@ -58,10 +58,34 @@ python $FAIRSEQ_PATH/fairseq_cli/generate.py \
 Download tercom from https://www.cs.umd.edu/~snover/tercom/, then use $NJUQE_PATH/scripts/ter/generate_ter_label.sh 
 generate pseudo labels. Or design other labeling rules for specific annotations.
 
+Example of generating pseudo MQM QE data with DCSQE.
+```
+bash scripts/generate_dcsqe.sh
+```
+You have to prepare the parallel data and the Generator and the Annotator before run above script.
+```
+$SEED_DATA_PATH/                   # Parallel data
+├── raw.$src-$tgt.$src                  
+├── raw.$src-$tgt.$tgt
+├── dict.$src.txt                  # The dictionaries corresponding to Generator and Annotator
+├── dict.$tgt.txt
+├── dict.tag.txt                   # including "OK 3\nBAD 2\nPAD 1"
+├── bpecode.${src}-${tgt}.joint
+```
+
+
+
 
 ## Citation
 Please cite as:
 ``` bibtex
+@inproceedings{geng2025dcsqe,
+  title={Alleviating Distribution Shift in Synthetic Data for Machine Translation Quality Estimation}, 
+  author={Xiang Geng and Zhejian Lai and Jiajun Chen and Hao Yang and Shujian Huang},
+  booktitle={Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics},
+  year={2025}
+}
+
 @inproceedings{geng2023cbsqe,
   title={Improved Pseudo Data for Machine Translation Quality Estimation with Constrained Beam Search},
   author={Geng, Xiang and Zhang, Yu and Lai, Zhejian and She, Shuaijie and Zou, Wei and Tao, Shimin and Yang, Hao and Chen, Jiajun and Huang, Shujian},
@@ -88,4 +112,4 @@ Please cite as:
 ```
 
 ## Contributor
-Xiang Geng (gx@smail.nju.edu.cn), Yu Zhang, Zhejian Lai, Wohao Zhang, Yiming Yan, Qu Cui
+Xiang Geng (gx@smail.nju.edu.cn), Yu Zhang, Zhejian Lai(laizj@smail.nju.edu.cn), Wohao Zhang, Yiming Yan, Qu Cui
