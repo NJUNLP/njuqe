@@ -3,6 +3,14 @@
 
 NJUQE is an open-source toolkit to build machine translation quality estimation (QE) models.
 
+## Open-source DCSQE Models
+
+We are pleased to announce the release of our DCSQE model, available at [DCSQE](https://huggingface.co/collections/DreamW1ngs/dcsqe-68a6885d0b392a1fbd2ae897).
+
+* The "syn" variant indicates a model pre-trained exclusively on pseudo data;
+* The "sent" variant refers to a model that has undergone pre-training on pseudo data and additional fine-tuning on real QE data, with a focus on sentence-level tasks;
+* The "word" variant denotes a model that has been pre-trained on pseudo data and further fine-tuned on real QE data, specializing in word-level tasks.
+
 ## Requirements and Installation
 * PyTorch version >= 1.5.0
 * Python version >= 3.7
