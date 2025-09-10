@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr, pearsonr, zscore
-from transformers
 
 
 def read_prob_file(file_path):
